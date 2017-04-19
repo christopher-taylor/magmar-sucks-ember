@@ -1,0 +1,19 @@
+<tr {{action 'expand'}}>
+    <td>
+        {{expand-collapse-chevron expanded=expanded}}
+    </td>
+    <td class="text-right">
+        #{{pokemon.id}}
+    </td>
+    <td>
+        <a href="http://bulbapedia.bulbagarden.net/wiki/{{pokemon.name}}">{{pokemon.name}}</a>
+    </td>
+    <td>
+        {{#liquid-spacer}}
+        {{pokemon.description}}
+        {{#if expanded}}
+            {{episode-details data=episodeDetails}}
+        {{/if}}
+        {{/liquid-spacer}}
+    </td>
+</tr>

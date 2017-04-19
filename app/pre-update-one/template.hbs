@@ -1,0 +1,21 @@
+<table class='table table-hover table-striped'>
+    <thead>
+        <tr data-table-header='{{tier.name}}' class="table-inverse">
+            <th></th>
+            <th class="text-right">
+                #
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody class="table-striped collapse show" data-collapse-target='{{tier.name}}'>
+        {{#each model as |pokemon|}}
+            {{table-row pokemon=pokemon}}
+        {{/each}}
+    </tbody>
+</table>

@@ -1,5 +1,6 @@
 {
   "name": "magmar-sucks-ember",
   "dependencies": {
+    "remodal": "1.1.0"
   }
 }

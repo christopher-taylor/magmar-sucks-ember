@@ -1,0 +1,8 @@
+<div class="col-sm-6 offset-sm-3">
+    {{#each activeModel as |episode|}}
+        {{episode-card episode=episode class="episode-card"}}
+    {{/each}}
+    {{#if moreEpisodes}}
+        <button type="btn" class="btn btn-primary" style="margin-left:50%;margin-right:50%" {{action 'fetchMorePages'}}>More Episodes</button>
+    {{/if}}
+</div>

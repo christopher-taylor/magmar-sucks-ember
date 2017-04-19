@@ -1,0 +1,18 @@
+th.fit,td.fit{width: 1%;white-space: nowrap;}
+
+.rotatable {
+    transition: all .1s linear;
+}
+.rotatable.rotated {
+    transform: rotate(90deg);
+}
+
+.episode-card {
+    margin-bottom: 1em;
+}
+
+.episode-card-wrapper{
+    border: 1px solid rgba(0,0,0,.15);
+    padding: 1em auto;
+    border-radius: 12px;
+}

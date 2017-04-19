@@ -1,0 +1,13 @@
+<div class="row" {{action 'toggleTableVisibility'}}>
+    <div class="col-sm-1">
+        {{expand-collapse-chevron size=2 class="ml-1" expanded=expanded}}
+    </div>
+    <div class=" col-sm-11 text-center">
+        <h2>{{tier.name}}</h2>
+    </div>
+</div>
+{{#liquid-spacer}}
+    {{#if expanded}}
+        {{table-component tier=tier}}
+    {{/if}}
+{{/liquid-spacer}}
