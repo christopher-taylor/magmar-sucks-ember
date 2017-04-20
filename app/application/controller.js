@@ -6,7 +6,12 @@ export default Ember.Controller.extend({
   subject: undefined,
   body: undefined,
   sendDisabled: Ember.computed('address', 'subject', 'body', function(){
-    return (!this.get('address') && !this.get('subject') && !this.get('body'));
+      console.log({
+          bodyVal: this.get('body'),
+          addressVal: this.get('address'),
+
+      })
+    return (!this.get('address') || !this.get('subject') || !this.get('body'));
   }),
 
   closeModal() {
