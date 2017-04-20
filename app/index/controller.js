@@ -19,7 +19,6 @@ export default Ember.Controller.extend({
     },
 
     sliceModel(){
-        console.log('didRecieveAttrs')
         var model = this.get('model').toArray();
         var page = this.get('page');
         var size = this.get('size');
@@ -27,9 +26,7 @@ export default Ember.Controller.extend({
         startSlice = (startSlice !== 0) ? startSlice - 1 : startSlice;
         var endSlice = startSlice + size;
         var slice = model.slice(0, endSlice);
-        console.log(startSlice, endSlice, slice)
         this.set('activeModel', Ember.A(slice));
-        console.log(endSlice, model.length)
         this.set('moreEpisodes', (endSlice <= model.length));
     },
 

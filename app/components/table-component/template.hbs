@@ -1,10 +1,12 @@
 <table class='table table-hover table-striped'>
     <thead>
         <tr data-table-header='{{tier.name}}' class="table-inverse">
-            <th></th>
-            <th class="text-right">
-                #
-            </th>
+            <th class="fit"></th>
+            {{#unless media.isMobile}}
+                <th class="text-right">
+                    #
+                </th>
+            {{/unless}}
             <th>
                 Name
             </th>

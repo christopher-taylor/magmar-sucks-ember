@@ -11,8 +11,20 @@ th.fit,td.fit{width: 1%;white-space: nowrap;}
     margin-bottom: 1em;
 }
 
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .episode-card-wrapper{
     border: 1px solid rgba(0,0,0,.15);
     padding: 1em auto;
     border-radius: 12px;
+}
+
+.no-show{
+    display:none;
+}
+td > div {
+    width: 100% !important;
 }

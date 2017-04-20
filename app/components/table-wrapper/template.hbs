@@ -1,8 +1,8 @@
-<div class="row" {{action 'toggleTableVisibility'}}>
-    <div class="col-sm-1">
-        {{expand-collapse-chevron size=2 class="ml-1" expanded=expanded}}
+<div class="{{if media.isMobile 'd-inline-flex align-items-center'}}" {{action 'toggleTableVisibility'}}>
+    <div class="d-inline-block pl-1">
+        {{expand-collapse-chevron size=2 expanded=expanded}}
     </div>
-    <div class=" col-sm-11 text-center">
+    <div class="d-inline-block text-center" style="width:calc(100% - 36px)">
         <h2>{{tier.name}}</h2>
     </div>
 </div>

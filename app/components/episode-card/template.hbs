@@ -1,4 +1,4 @@
-<div class="col-sm-3">
+<div class="col-sm-3 {{if media.isMobile 'text-center'}}">
     <img class="img-fluid" src="{{episode.imageSmall}}">
 </div>
 <div class="col-sm-9 d-inline-flex flex-column justify-content-between">
@@ -9,7 +9,7 @@
     <div>
         <iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.com/e/{{episode.simplecastId}}?style=dark' width='100%'></iframe>
     </div>
-    <div>
+    <div class={{if media.isMobile 'text-justify'}}>
         {{if episode.description episode.description "We're lazy fucks, so there isn't a description for this episode!"}}
     </div>
 </div>

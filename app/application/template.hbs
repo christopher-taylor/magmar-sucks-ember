@@ -1,10 +1,41 @@
-<div class="row mt-2">
-  <div class="col-sm-2">
-    <img class="img-fluid" src="/images/square-header.jpg" title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
+{{#if media.isMobile}}
+    <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse bg-inverse" style="width:100%!important;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            {{#link-to 'index' class="nav-link"}}Home{{/link-to}}
+          </li>
+          <li class="nav-item">
+            {{#link-to 'current' class='nav-link'}}Current Rankings{{/link-to}}
+          </li>
+          <li class="nav-item">
+            {{#link-to 'pre-update-one' class="nav-link"}}E000-E055{{/link-to}}
+          </li>
+          <li class="nav-item">
+            {{#link-to 'pre-update-two' class="nav-link"}}E056-E130{{/link-to}}
+          </li>
+          <li class="nav-item">
+            <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+{{/if}}
+
+<div class="row">
+  <div class="col-sm-3">
+    <img class="img-fluid" src="{{unless media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}" title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
   </div>
-  <div class="col-sm-9 d-inline-flex flex-column justify-content-between">
-    <h1>Magmar Sucks: The Ranking of Pokmon</h1>
-    <div>
+  <div class="col-sm-8 d-inline-flex flex-column justify-content-between">
+    {{#unless media.isMobile}}
+      <div class="text-center">
+        <h1>Magmar Sucks</h1>
+      </div>
+    {{/unless}}
+    <div class="{{if media.isMobile "text-justify mt-2 pl-2 pr-2"}}">
       <p>
         Pokemon are loved by all, unless you're Magmar - if you're Magmar, you suck. From
         the depths of the Pokedex, we bring you a discussion about the world most (un)interesting
@@ -14,25 +45,27 @@
         Episodes generally release every other day.
       </p>
     </div>
-    <ul class="nav nav-pills justify-content-center">
-      <li class="nav-item">
-        {{#link-to 'index' class="nav-link"}}Home{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to 'current' class='nav-link'}}Current Rankings{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to 'pre-update-two' class="nav-link"}}E056-E130{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to 'pre-update-one' class="nav-link"}}E000-E055{{/link-to}}
-      </li>
-      <li class="nav-item">
-        <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
-      </li>
-    </ul>
+    {{#unless media.isMobile}}
+      <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+          {{#link-to 'index' class="nav-link"}}Home{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to 'current' class='nav-link'}}Current Rankings{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to 'pre-update-two' class="nav-link"}}E056-E130{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to 'pre-update-one' class="nav-link"}}E000-E055{{/link-to}}
+        </li>
+        <li class="nav-item">
+          <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
+        </li>
+      </ul>
+    {{/unless}}
   </div>
-  <div class="col-md-1 text-center d-inline-flex flex-column justify-content-around">
+  <div class="col-md-1 text-center d-inline-flex {{unless media.isMobile 'justify-content-around flex-column' 'flex-row justify-content-between ml-2 mr-2'}}">
     <a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/I6x5pmmhw5dzo52nb6vplkuerza?t%3DMagmar_Sucks%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16'
       rel='nofollow'>
       {{fa-icon 'google' size="2x" class="text-muted"}}
@@ -52,7 +85,7 @@
   <div class="form-group">
     <label for="email">Email address</label>
     {{input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" value=address required=true}}
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email.</small>
   </div>
   <div class="form-group">
     <label for="subject">Subject</label>

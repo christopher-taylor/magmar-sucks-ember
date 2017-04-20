@@ -7,8 +7,8 @@ export default DS.JSONAPISerializer.extend({
         let record = {};
         let attributes = {}
         payload.forEach((episode) => {
-            let record = {};
-            let attributes = {};
+            record = {};
+            attributes = {};
             let fullDateString = episode.published_at;
             let dateString = fullDateString.split('T')[0];
             let dateArray = dateString.split('-');
@@ -28,7 +28,6 @@ export default DS.JSONAPISerializer.extend({
         });
         output.data = data;
         output.meta = {};
-        console.log(output);
         return output;
     }
 });
