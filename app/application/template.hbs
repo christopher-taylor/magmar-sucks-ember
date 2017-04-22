@@ -25,6 +25,8 @@
     </nav>
 {{/if}}
 
+<div class="container-fluid">
+
 <div class="row">
   <div class="col-sm-3">
     <img class="img-fluid" src="{{unless media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}" title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
@@ -52,7 +54,8 @@
         </li>
         <li class="nav-item">
           {{#link-to 'current' class='nav-link'}}Current Rankings{{/link-to}}
-        </li>
+        </li
+        >
         <li class="nav-item">
           {{#link-to 'pre-update-two' class="nav-link"}}E056-E130{{/link-to}}
         </li>
@@ -78,6 +81,8 @@
     <a href="https://rss.simplecast.com/podcasts/2597/rss">{{fa-icon 'rss' size="2x" class="text-muted"}}</a>
   </div>
 </div>
+</div>
+
 <hr />
 {{liquid-outlet}}
 {{#ember-remodal forService=true title='Contact Us'}}
