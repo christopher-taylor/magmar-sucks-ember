@@ -1,8 +1,8 @@
-<div class="{{if media.isMobile 'd-inline-flex align-items-center'}}" {{action 'toggleTableVisibility'}}>
-    <div class="d-inline-block pl-1">
-        {{expand-collapse-chevron size=2 expanded=expanded}}
+<div class="row" {{action 'toggleTableVisibility'}}>
+    <div class="col-1 pl-4 pb-1">
+        {{expand-collapse-chevron tagName='' size=2 expanded=expanded}}
     </div>
-    <div class="d-inline-block text-center" style="width:calc(100% - 36px)">
+    <div class="col-10 text-center">
         <h2>{{tier.name}}</h2>
     </div>
 </div>
