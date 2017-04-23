@@ -4,18 +4,14 @@ export default Ember.Controller.extend({
   address: undefined,
   subject: undefined,
   body: undefined,
-  sendDisabled: Ember.computed('address',
-    'subject', 'body',
-    function() {
-      console.log({
-        bodyVal: this.get('body'),
-        addressVal: this.get('address'),
-      });
-       return (!this.get('address') || !this.get('subject') || !this.get('body'));
-    }),
+  sendDisabled: Ember.computed('address', 'subject', 'body', function() {
+     return (!this.get('address') || !this.get('subject') || !this.get('body'));
+  }),
+
   closeModal() {
     this.get('remodal').close();
   },
+  
   actions: {
     openModal() {
       this.get('remodal').open();

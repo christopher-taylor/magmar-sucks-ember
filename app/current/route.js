@@ -7,10 +7,10 @@ export default Ember.Route.extend({
       let tiers = ["SSS Tier", "Waifu Tier", "Discussable Tier", "Neat/Goofy Tier", "Marginally Interesting Tier", "Onetrickland", "Blandland", "ABSOLUTE ZERO", "Just An Animal Tier", "Literally & Figuratively Hitler"];
       return this.store.query('pokemon', 'ranking').then((episodes) => {
         let pokemon = Ember.A(episodes);
-        tiers.forEach((tier) => {
+        tiers.forEach((tier, index) => {
           model.push({
             name: tier,
-            pokemon: pokemon.filterBy('tier', tier)
+            pokemon: pokemon.filterBy('tier', index)
           });
         });
         return model;
