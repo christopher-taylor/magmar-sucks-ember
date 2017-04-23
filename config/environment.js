@@ -4,8 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'magmar-sucks-ember',
     environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '/#/',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
