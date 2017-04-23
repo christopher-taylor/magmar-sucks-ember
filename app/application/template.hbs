@@ -1,106 +1,112 @@
 {{#if media.isMobile}}
-    <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse bg-inverse" style="width:100%!important;">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            {{#link-to 'index' class="nav-link"}}Home{{/link-to}}
-          </li>
-          <li class="nav-item">
-            {{#link-to 'current' class='nav-link'}}Current Rankings{{/link-to}}
-          </li>
-          <li class="nav-item">
-            {{#link-to 'pre-update-two' class="nav-link"}}E056-E130{{/link-to}}
-          </li>
-          <li class="nav-item">
-            {{#link-to 'pre-update-one' class="nav-link"}}E000-E055{{/link-to}}
-          </li>
-          <li class="nav-item">
-            <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-{{/if}}
-
-<div class="container-fluid">
-
-<div class="row">
-  <div class="col-sm-3">
-    <img class="img-fluid" src="{{unless media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}" title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
-  </div>
-  <div class="col-sm-8 d-inline-flex flex-column justify-content-between">
-    {{#unless media.isMobile}}
-      <div class="text-center">
-        <h1>Magmar Sucks</h1>
-      </div>
-    {{/unless}}
-    <div class="{{if media.isMobile "text-justify mt-2 pl-2 pr-2"}}">
-      <p>
-        Pokemon are loved by all, unless you're Magmar - if you're Magmar, you suck. From
-        the depths of the Pokedex, we bring you a discussion about the world most (un)interesting
-        Pokemon, and rank them from most to least interesting, one Pokemon at a time.
-      </p>
-      <p>
-        Episodes generally release every other day.
-      </p>
-    </div>
-    {{#unless media.isMobile}}
-      <ul class="nav nav-pills justify-content-center">
+  <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse bg-inverse" style="width:100%!important;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          {{#link-to 'index' class="nav-link"}}Home{{/link-to}}
+          <a {{action 'toggleAndTransition' 'index' }} class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          {{#link-to 'current' class='nav-link'}}Current Rankings{{/link-to}}
-        </li
-        >
-        <li class="nav-item">
-          {{#link-to 'pre-update-two' class="nav-link"}}E056-E130{{/link-to}}
+          <a {{action 'toggleAndTransition' 'current'}} class='nav-link'>Current Rankings</a>
         </li>
         <li class="nav-item">
-          {{#link-to 'pre-update-one' class="nav-link"}}E000-E055{{/link-to}}
+          <a {{action 'toggleAndTransition' 'pre-update-two'}} class="nav-link">E056-E130</a>
+        </li>
+        <li class="nav-item">
+          <a {{action 'toggleAndTransition' 'pre-update-one'}} class="nav-link">E000-E055</a>
         </li>
         <li class="nav-item">
           <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
         </li>
       </ul>
-    {{/unless}}
+    </div>
+  </nav>
+{{/if}}
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-3">
+      <img class="img-fluid" src="{{unless media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}"
+        title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
+    </div>
+    <div class="col-sm-8 d-inline-flex flex-column justify-content-between">
+      {{#unless media.isMobile}}
+        <div class="text-center">
+          <h1>Magmar Sucks</h1>
+        </div>
+      {{/unless}}
+      <div class="{{if media.isMobile "text-justify mt-2 pl-2 pr-2"}}">
+        <p>
+          Pokemon are loved by all, unless you're Magmar - if you're Magmar, you suck. From
+          the depths of the Pokedex, we bring you a discussion about the world most
+          (un)interesting Pokemon, and rank them from most to least interesting,
+          one Pokemon at a time.
+        </p>
+        <p>
+          Episodes generally release every other day.
+        </p>
+      </div>
+      {{#unless media.isMobile}}
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            {{#link-to 'index' class="nav-link" }}Home{{/link-to}}
+          </li>
+          <li class="nav-item">
+            {{#link-to 'current' class='nav-link' }}Current Rankings{{/link-to}}
+          </li>
+          <li class="nav-item">
+
+            {{#link-to 'pre-update-two' class="nav-link" }}E056-E130{{/link-to}}
+          </li>
+          <li class="nav-item">
+            {{#link-to 'pre-update-one' class="nav-link" }}E000-E055{{/link-to}}
+          </li>
+          <li class="nav-item">
+            <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
+          </li>
+        </ul>
+      {{/unless}}
+    </div>
+    <div class="col-md-1 text-center d-inline-flex {{unless media.isMobile 'justify-content-around flex-column' 'flex-row justify-content-between ml-2 mr-2'}}">
+      <a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/I6x5pmmhw5dzo52nb6vplkuerza?t%3DMagmar_Sucks%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16'
+        rel='nofollow'>
+        {{fa-icon 'google' size="2x" class="text-muted"}}
+      </a>
+      <br />
+      <a href="https://geo.itunes.apple.com/us/podcast/magmar-sucks/id1125767902?mt=2">
+        {{fa-icon 'apple' size="2x" class="text-muted"}}
+      </a>
+      <br/>
+      <a href="https://rss.simplecast.com/podcasts/2597/rss">{{fa-icon 'rss' size="2x" class="text-muted"}}</a>
+    </div>
   </div>
-  <div class="col-md-1 text-center d-inline-flex {{unless media.isMobile 'justify-content-around flex-column' 'flex-row justify-content-between ml-2 mr-2'}}">
-    <a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/I6x5pmmhw5dzo52nb6vplkuerza?t%3DMagmar_Sucks%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16'
-      rel='nofollow'>
-      {{fa-icon 'google' size="2x" class="text-muted"}}
-    </a>
-    <br />
-    <a href="https://geo.itunes.apple.com/us/podcast/magmar-sucks/id1125767902?mt=2">
-      {{fa-icon 'apple' size="2x" class="text-muted"}}
-    </a>
-    <br/>
-    <a href="https://rss.simplecast.com/podcasts/2597/rss">{{fa-icon 'rss' size="2x" class="text-muted"}}</a>
-  </div>
-</div>
 </div>
 
-<hr />
-{{liquid-outlet}}
-{{#ember-remodal forService=true title='Contact Us'}}
-<form action="https://formspree.io/contact@magmar.sucks" method="POST" class="text-left">
-  <div class="form-group">
-    <label for="email">Email address</label>
-    {{input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" value=address required=true}}
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email.</small>
-  </div>
-  <div class="form-group">
-    <label for="subject">Subject</label>
-    {{input type="text" class="form-control" name="_subject" id="subject" aria-describedby="emailHelp" placeholder="What are you emailing us about" value=subject required=true}}
-  </div>
-  <input type="hidden" name="_next" value="http://www.magmar.sucks/" />
-  <div class="form-group">
-    <label for="exampleTextarea">Message</label>
-    {{input type='textarea' class="form-control" name="body" placeholder="Write your (optionally) meaningful message here" id="exampleTextarea" rows="3" value=body required=true}}
-  </div>
-  <button type="submit" disabled={{sendDisabled}} class="btn btn-primary pull-right">Submit</button>
-</form>
+<hr /> {{liquid-outlet}}
+{{#ember-remodal forService=true title='Contact Us' }}
+  <form action="https://formspree.io/contact@magmar.sucks" method="POST" class="text-left">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      {{input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+      placeholder="Enter email" value=address required=true}}
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email.</small>
+    </div>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      {{input type="text" class="form-control" name="_subject" id="subject" aria-describedby="emailHelp"
+      placeholder="What are you emailing us about" value=subject required=true}}
+    </div>
+    <input type="hidden" name="_next" value="http://www.magmar.sucks/" />
+    <div class="form-group">
+      <label for="exampleTextarea">Message</label>
+      {{input type='textarea' class="form-control" name="body" placeholder="Write your
+      (optionally) meaningful message here" id="exampleTextarea" rows="3" value=body
+      required=true}}
+    </div>
+    <button type="submit" disabled= {{sendDisabled}} class="btn btn-primary pull-right">Submit</button>
+  </form>
 {{/ember-remodal}}
