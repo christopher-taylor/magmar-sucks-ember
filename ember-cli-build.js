@@ -5,6 +5,9 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     'ember-font-awesome': {
       fontFormats: ['svg', 'woff', 'woff2']
+    },
+    babel: {
+      optional: ['es7.decorators']
     }
   });
 

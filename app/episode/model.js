@@ -1,12 +1,13 @@
 import DS from 'ember-data';
+import attr from "ember-computed-decorators/ember-data";
 
 export default DS.Model.extend({
-    title: DS.attr('string'),
-    date: DS.attr('string'),
-    simplecastId: DS.attr('number'),
-    description: DS.attr('string'),
-    shownotes: DS.attr('string'),
-    imageSmall: DS.attr('string'),
-    imageMedium: DS.attr('string'),
-    imageLarge: DS.attr('string')
+    @attr('string') title,
+    @attr('string') date,
+    @attr('number') simplecastId,
+    @attr('string') description,
+    @attr('string') shownotes,
+    @attr('string') imageSmall,
+    @attr('string') imageMedium,
+    @attr('string') imageLarge
 });
