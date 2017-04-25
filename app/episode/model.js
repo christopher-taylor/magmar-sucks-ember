@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import attr from "ember-computed-decorators/ember-data";
+import { attr } from "ember-computed-decorators/ember-data";
 
 export default DS.Model.extend({
     @attr('string') title,

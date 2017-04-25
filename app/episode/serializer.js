@@ -7,7 +7,6 @@ export default DS.JSONAPISerializer.extend({
         let record = {};
         let attributes = {}
         payload.forEach((episode) => {
-            console.log(`${typeof episode.published} ${episode.published}`)
             if(episode.published){
                 record = {};
                 attributes = {};

@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import computed from 'ember-computed-decorators';
+
 export default Ember.Controller.extend({
   remodal: Ember.inject.service(),
   address: undefined,
