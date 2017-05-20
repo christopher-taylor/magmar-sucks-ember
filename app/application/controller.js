@@ -11,13 +11,14 @@ export default Ember.Controller.extend({
   closeModal() {
     this.get('remodal').close();
   },
-  
+
   actions: {
     openModal() {
-      this.get('remodal').open();
+      this.get('remodal').open()
     },
     toggleAndTransition(routeName) {
       Ember.$('.collapse').collapse('hide');
+      this.send('cancelMemes');
       this.transitionToRoute(routeName);
     }
   }

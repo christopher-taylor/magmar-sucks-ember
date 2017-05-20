@@ -1,5 +1,9 @@
 th.fit,td.fit{width: 1%;white-space: nowrap;}
 
+.remodal-wrapper{
+    padding: 0 !important;
+}
+
 .rotatable {
     transition: all .1s linear;
 }
@@ -14,6 +18,7 @@ th.fit,td.fit{width: 1%;white-space: nowrap;}
 body {
     max-width: 1200px;
     margin: auto;
+    padding: 0 10px !important;
 }
 
 .episode-card-wrapper{

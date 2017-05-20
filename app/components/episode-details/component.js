@@ -6,6 +6,7 @@ export default Ember.Component.extend({
   tagName: 'tr',
   classNameBindings: ['expanded::no-show'],
   showNotes: Ember.computed('data', function() {
-    return Ember.String.htmlSafe(CONVERTER.makeHtml(this.get('data').long_description));
+    console.log(this.get('data'));
+    return Ember.String.htmlSafe(CONVERTER.makeHtml(this.get('data.shownotes')));
   })
 });

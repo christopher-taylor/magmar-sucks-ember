@@ -1,9 +1,7 @@
 <td colspan="{{unless media.isMobile 4 3}}">
-        {{#liquid-spacer}}
-            {{!-- This if exists to control asynchronous data flow, do not remove --}}
-            {{#if expanded}}
-                <iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.com/e/{{data.id}}?style=light' width='100%'></iframe>
-                {{showNotes}}
-            {{/if}}
-        {{/liquid-spacer}}
+    {{!-- This if exists to control asynchronous data flow, do not remove --}}
+    {{#if expanded}}
+        <iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.com/e/{{data.id}}?style=dark' width='100%'></iframe>
+        {{showNotes}}
+    {{/if}}
 </td>

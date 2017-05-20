@@ -13,10 +13,9 @@ export default DS.JSONAPISerializer.extend({
             let dateString = fullDateString.split('T')[0];
             let dateArray = dateString.split('-');
             let date = `${dateArray[1]}/${dateArray[2]}/${dateArray[0]}`
-            record.id = episode.guid;
+            record.id = episode.id;
             record.type = 'episode';
             attributes.title = episode.title;
-            attributes.simplecastId = episode.id;
             attributes.date = date;
             attributes.description = episode.description;
             attributes.shownotes = episode.long_description;
