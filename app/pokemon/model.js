@@ -1,9 +1,9 @@
 import DS from 'ember-data';
+import {attr} from "ember-computed-decorators/ember-data";
 
 export default DS.Model.extend({
-    // number: DS.attr('string'),
-    simplecastEpisodeId: DS.attr('number'),
-    name: DS.attr('string'),
-    description: DS.attr("string"),
-    tier: DS.attr('string')
+    @attr('number') simplecastEpisodeId,
+    @attr('string') name,
+    @attr('string') description,
+    @attr('string') tier
 });

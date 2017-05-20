@@ -1,12 +1,16 @@
 import Ember from 'ember';
+import computed from 'ember-computed-decorators';
+
 export default Ember.Controller.extend({
   remodal: Ember.inject.service(),
   address: undefined,
   subject: undefined,
   body: undefined,
-  sendDisabled: Ember.computed('address', 'subject', 'body', function() {
-     return (!this.get('address') || !this.get('subject') || !this.get('body'));
-  }),
+
+  @computed('address', 'subject', 'body')
+  sendDisabled(address, subject, body) {
+     return (!address || !subject || !body);
+  },
 
   closeModal() {
     this.get('remodal').close();
