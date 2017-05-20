@@ -23,7 +23,8 @@ body {
 
 .episode-card-wrapper{
     border: 1px solid rgba(0,0,0,.15);
-    padding: 1em auto;
+    padding: 1em;
+    margin-bottom: 1em;
     border-radius: 12px;
 }
 

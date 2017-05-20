@@ -7,11 +7,10 @@ export default Ember.Component.extend({
   actions: {
     expand() {
       if (!this.get('episodeDetails')) {
-        let episode = this.get('store').peekRecord('episode', this.get('pokemon.simplecastEpisodeId'));
-        console.log(episode);
-        this.set('episodeDetails',
-        episode);
-        this.toggleProperty('expanded');
+        this.get('store').findRecord('episode', this.get('pokemon.simplecastEpisodeId')).then((episode) => {
+            this.set('episodeDetails', episode);
+            this.toggleProperty('expanded');
+        });
         } else {
         this.toggleProperty('expanded');
       }

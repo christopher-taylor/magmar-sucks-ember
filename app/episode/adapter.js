@@ -5,5 +5,8 @@ export default DS.JSONAPIAdapter.extend({
     namespace: 'v1/podcasts',
     urlForQuery(){
         return `${this.get('host')}/${this.get('namespace')}/2597/episodes.json?api_key=sc_7TG3ktOxQ6N_r7halBSboA`;
+    },
+    urlForFindRecord(id, modelName, snapshot) {
+      return `${this.get('host')}/${this.get('namespace')}/2597/episodes/${id}.json?api_key=sc_7TG3ktOxQ6N_r7halBSboA`;
     }
 });
