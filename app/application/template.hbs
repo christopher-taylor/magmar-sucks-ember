@@ -26,19 +26,15 @@
   </nav>
 {{/if}}
 
-<div class="container-fluid">
-
+<div class="container-fluid {{if media.isMobile 'pl-0 pr-0'}}">
   <div class="row">
-    <div class="col-sm-3">
-      <img class="img-fluid" src="{{unless media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}"
+    <div class="col-12">
+      <img class="img-fluid {{unless media.isMobile "w-100"}}" src="{{if media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}"
         title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
     </div>
-    <div class="col-sm-8 d-inline-flex flex-column justify-content-between">
-      {{#unless media.isMobile}}
-        <h1 class="text-center">Magmar Sucks</h1>
-      {{/unless}}
-      <div class="{{if media.isMobile "text-justify mt-2 pl-2 pr-2"}}">
-        <p class='text-justify'>
+    <div class="d-inline-flex flex-column justify-content-between col-sm-12 col-xl-11 mt-2 {{if media.isMobile "text-justify ml-4 mr-4"}}">
+      <div>
+        <p>
           Pokemon are loved by all, unless you're Magmar - if you're Magmar, you suck. From
           the depths of the Pokedex, we bring you a discussion about the world's most
           (un)interesting Pokemon, and rank them from most to least interesting,
@@ -69,7 +65,7 @@
         </ul>
       {{/unless}}
     </div>
-    <div class="col-md-1 text-center d-inline-flex {{unless media.isMobile 'justify-content-around flex-column' 'flex-row justify-content-between ml-2 mr-2'}}">
+    <div class="col-md-1  d-inline-flex {{unless media.isMobile ' text-right justify-content-around flex-column mt-2' 'text-center flex-row justify-content-between ml-4 mr-4'}}">
       <a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/I6x5pmmhw5dzo52nb6vplkuerza?t%3DMagmar_Sucks%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16'
         rel='nofollow'>
         {{fa-icon 'google' size="2x" class="text-muted"}}

@@ -1,13 +1,15 @@
-<div class="col-sm-3 {{if media.isMobile 'text-center'}}">
-    <img class="img-fluid" src="{{episode.imageSmall}}">
-</div>
-<div class="col-sm-9 d-inline-flex flex-column justify-content-between">
+{{#unless media.isMobile}}
+    <div class="col-xl-3">
+        <img class="img-fluid" src="{{episode.imageSmall}}">
+    </div>
+{{/unless}}
+<div class="col-sm-12 col-xl-9 d-inline-flex flex-column justify-content-between">
     <div>
         <h3>{{episode.title}}</h3>
         <h6 class="text-muted">{{episode.date}}</h6>
     </div>
     <div>
-        <iframe frameborder='0' height='36px' scrolling='no' seamless src='https://simplecast.com/e/{{episode.id}}?style=dark' width='100%'></iframe>
+        <iframe frameborder='0' height='36px' class="w-100" scrolling='no' seamless src='https://simplecast.com/e/{{episode.id}}?style=dark'></iframe>
     </div>
     <div class={{if media.isMobile 'text-justify'}}>
         {{if episode.description episode.description "We're lazy fucks, so there isn't a description for this episode!"}}
