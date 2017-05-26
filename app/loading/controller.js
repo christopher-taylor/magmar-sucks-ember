@@ -10,7 +10,6 @@ export default Ember.Controller.extend({
     },
 
     memeCallback(){
-      console.log('memeing')
         this.set('currentMeme', DANK_MEMES[getRandomIntInclusive(0, DANK_MEMES.length - 1)]);
         let id = Ember.run.later(() => {
           this.memeCallback();
