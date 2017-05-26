@@ -14,7 +14,7 @@ export default DS.JSONAPISerializer.extend({
         return output;
     },
 
-    normalizeSingleResponse(store, primaryModelClass, payload, id, requestType){
+    normalizeSingleResponse (store, primaryModelClass, payload, id, requestType){
         let output = {};
         output.data = this.createRecord(payload);
         output.meta = {};
@@ -22,21 +22,20 @@ export default DS.JSONAPISerializer.extend({
     },
 
     createRecord(episode){
-        console.log(episode)
         let record = {};
         let attributes = {};
         let fullDateString = episode.published_at;
         let dateString = fullDateString.split('T')[0];
         let dateArray = dateString.split('-');
         let date = `${dateArray[1]}/${dateArray[2]}/${dateArray[0]}`
-        record.id = episode.id;
+        record.id = episode.id.toString();
         record.type = 'episode';
         attributes.title = episode.title;
         attributes.date = date;
         attributes.description = episode.description;
         attributes.shownotes = episode.long_description;
         attributes.imageSmall = episode.images.thumb;
-        attributes.imageMedium = episode.images.medium;
+        attributes.imageMedium = episode.images.small;
         attributes.imageLarge = episode.images.large;
         record.attributes = attributes;
         return record;

@@ -1,8 +1,8 @@
 export default function() {
   this.transition(
     this.fromRoute('loading'),
-    this.use('crossFade'),
-    this.reverse('crossFade')
+    this.use('fade'),
+    this.reverse('fade')
   );
   this.transition(
     this.fromRoute('index'),

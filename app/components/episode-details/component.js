@@ -9,7 +9,6 @@ export default Ember.Component.extend({
 
   @computed('data')
   showNotes(data) {
-    console.log(data)
     return Ember.String.htmlSafe(CONVERTER.makeHtml(data.get('shownotes')));
   }
 });
