@@ -22,7 +22,6 @@ export default Ember.Controller.extend({
     },
     toggleAndTransition(routeName) {
       Ember.$('.collapse').collapse('hide');
-      this.send('cancelMemes');
       this.transitionToRoute(routeName);
     }
   }

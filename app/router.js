@@ -11,8 +11,8 @@ Router.map(function() {
   this.route('pre-update-one');
   this.route('pre-update-two');
   this.route('404');
-  this.route('loading');
   this.route('catch-all', { path: '*:'});
+  this.route('loading');
 });
 
 export default Router;
