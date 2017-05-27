@@ -1,5 +1,5 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames: ['row', 'mb-3', 'episode-card-wrapper']
+    classNames: ['w-100', 'mb-3', 'episode-card-wrapper']
 });
