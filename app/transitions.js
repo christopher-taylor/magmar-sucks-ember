@@ -1,5 +1,10 @@
 export default function() {
   this.transition(
+    this.fromRoute('loading'),
+    this.use('crossFade'),
+    this.reverse('crossFade')
+  );
+  this.transition(
     this.fromRoute('index'),
     this.use('toLeft'),
     this.reverse('toRight')
