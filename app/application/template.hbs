@@ -1,5 +1,5 @@
 {{#if media.isMobile}}
-  <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse bg-inverse" style="width:100%!important;">
+  <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse" style="width:100%!important;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a {{action 'toggleAndTransition' 'index' }} class="nav-link">Home</a>
+          <a {{action 'toggleAndTransition' 'index' }} class="nav-link mobile">Home</a>
         </li>
         <li class="nav-item">
-          <a {{action 'toggleAndTransition' 'current'}} class='nav-link'>Current Rankings</a>
+          <a {{action 'toggleAndTransition' 'current'}} class='nav-link mobile'>Current Rankings</a>
         </li>
         <li class="nav-item">
-          <a {{action 'toggleAndTransition' 'pre-update-two'}} class="nav-link">E056-E130</a>
+          <a {{action 'toggleAndTransition' 'pre-update-two'}} class="nav-link mobile">E056-E130</a>
         </li>
         <li class="nav-item">
-          <a {{action 'toggleAndTransition' 'pre-update-one'}} class="nav-link">E000-E055</a>
+          <a {{action 'toggleAndTransition' 'pre-update-one'}} class="nav-link mobile">E000-E055</a>
         </li>
         <li class="nav-item">
-          <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
+          <a href="#" class='nav-link mobile' {{action 'openModal'}}>Contact Us</a>
         </li>
       </ul>
     </div>
@@ -27,7 +27,7 @@
 {{/if}}
 
 <div class="w-100">
-  <img class="img-fluid {{unless media.isMobile "w-100"}}" src="{{if media.isMobile '/images/square-header.jpg' '/images/banner-md.png'}}"
+  <img class="img-fluid {{unless media.isMobile "w-100"}}" src={{concat '/images/banner-' (if media.isMobile 'sm' 'md') '.png'}}
     title="This is a header image, it's pretty shit." alt="This is a header image, it's pretty shit.">
   <div class= {{unless media.isMobile 'row'}}>
 
@@ -67,12 +67,12 @@
     <div class="d-inline-flex {{unless media.isMobile 'col-1 text-right justify-content-around flex-column mt-2' 'w-100 text-center flex-row justify-content-between pl-2 pr-2'}}">
       <a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/I6x5pmmhw5dzo52nb6vplkuerza?t%3DMagmar_Sucks%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16'
         rel='nofollow'>
-        {{fa-icon 'google' size="2x" class="text-muted"}}
+        {{fa-icon 'google' size="2x" class="social-link"}}
       </a>
       <a href="https://geo.itunes.apple.com/us/podcast/magmar-sucks/id1125767902?mt=2">
-        {{fa-icon 'apple' size="2x" class="text-muted"}}
+        {{fa-icon 'apple' size="2x" class="social-link"}}
       </a>
-      <a href="https://rss.simplecast.com/podcasts/2597/rss">{{fa-icon 'rss' size="2x" class="text-muted"}}</a>
+      <a href="https://rss.simplecast.com/podcasts/2597/rss">{{fa-icon 'rss' size="2x" class="social-link"}}</a>
     </div>
   </div>
 </div>
@@ -93,8 +93,7 @@
     <input type="hidden" name="_next" value="http://www.magmar.sucks/" />
     <div class="form-group">
       <label for="exampleTextarea">Message</label>
-      {{input type='textarea' class="form-control" name="body" placeholder="Write your
-      (optionally) meaningful message here" id="exampleTextarea" rows="3" value=body
+      {{input type='textarea' class="form-control" name="body" placeholder="Write your (optionally) meaningful message here" id="exampleTextarea" rows="3" value=body
       required=true}}
     </div>
     <button type="submit" disabled= {{sendDisabled}} class="btn btn-primary pull-right">Submit</button>

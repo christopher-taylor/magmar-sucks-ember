@@ -3,11 +3,9 @@
         {{expand-collapse-chevron tagName='' size=2 expanded=expanded}}
     </div>
     <div class="col-10 text-center">
-        <h2>{{tier.name}}</h2>
+        <h2 class="tk-iskra"><strong>{{tier.name}}</strong></h2>
     </div>
 </div>
 {{#if expanded}}
-    {{#liquid-spacer}}
-        {{table-component tier=tier}}
-    {{/liquid-spacer}}
+    {{table-component tier=tier}}
 {{/if}}
