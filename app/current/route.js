@@ -1,12 +1,13 @@
-import Ember from 'ember';
+import { A } from '@ember/array';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
     if (!this.controller || !this.controller.get('model')) {
-      let model = Ember.A([]);
+      let model = A([]);
       let tiers = ["SSS Tier", "Waifu Tier", "Discussable Tier", "Neat/Goofy Tier", "Marginally Interesting Tier", "Onetrickland", "Blandland", "ABSOLUTE ZERO", "Just An Animal Tier", "Literally & Figuratively Hitler"];
       return this.store.query('pokemon', 'ranking').then((episodes) => {
-        let pokemon = Ember.A(episodes);
+        let pokemon = A(episodes);
         tiers.forEach((tier, index) => {
           model.push({
             name: tier,

@@ -1,8 +1,10 @@
-import Ember from 'ember';
+import $ from 'jquery';
+import { inject as service } from '@ember/service';
+import Controller from '@ember/controller';
 import computed from 'ember-computed-decorators';
 
-export default Ember.Controller.extend({
-  remodal: Ember.inject.service(),
+export default Controller.extend({
+  remodal: service(),
   address: undefined,
   subject: undefined,
   body: undefined,
@@ -21,7 +23,7 @@ export default Ember.Controller.extend({
       this.get('remodal').open()
     },
     toggleAndTransition(routeName) {
-      Ember.$('.collapse').collapse('hide');
+      $('.collapse').collapse('hide');
       this.transitionToRoute(routeName);
     }
   }

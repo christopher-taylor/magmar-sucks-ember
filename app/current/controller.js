@@ -1,10 +1,11 @@
-import Ember from 'ember';
+import $ from 'jquery';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
     actions: {
         collapse(target){
-            Ember.$(`[data-table-header='${target}']`).toggle();
-            Ember.$(`[data-collapse-target='${target}']`).collapse('toggle').then(()=>{
+            $(`[data-table-header='${target}']`).toggle();
+            $(`[data-collapse-target='${target}']`).collapse('toggle').then(()=>{
             });
         }
     }

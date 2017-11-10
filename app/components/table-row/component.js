@@ -1,6 +1,7 @@
-import Ember from 'ember';
-export default Ember.Component.extend({
-  store: Ember.inject.service(),
+import { inject as service } from '@ember/service';
+import Component from '@ember/component';
+export default Component.extend({
+  store: service(),
   tagName: '',
   expanded: false,
   episodeDetails: undefined,

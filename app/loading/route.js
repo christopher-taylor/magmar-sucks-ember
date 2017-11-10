@@ -1,7 +1,9 @@
-import Ember from 'ember';
+import { cancel } from '@ember/runloop';
+import { on } from '@ember/object/evented';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
-    cancelMemes: Ember.on('deactivate', function(){
-    Ember.run.cancel(this.controllerFor('application').get('memeCallback'));
+export default Route.extend({
+    cancelMemes: on('deactivate', function(){
+    cancel(this.controllerFor('application').get('memeCallback'));
   })
 });

@@ -1,14 +1,15 @@
-import Ember from 'ember';
+import { htmlSafe } from '@ember/string';
+import Component from '@ember/component';
 import computed from 'ember-computed-decorators';
 
 const CONVERTER = new showdown.Converter();
 
-export default Ember.Component.extend({
+export default Component.extend({
   tagName: 'tr',
   classNameBindings: ['expanded::no-show'],
 
   @computed('data')
   showNotes(data) {
-    return Ember.String.htmlSafe(CONVERTER.makeHtml(data.get('shownotes')));
+    return htmlSafe(CONVERTER.makeHtml(data.get('shownotes')));
   }
 });
