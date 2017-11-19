@@ -1,6 +1,7 @@
 {
   "name": "magmar-sucks-ember",
   "dependencies": {
-    "remodal": "1.1.0"
+    "remodal": "1.1.0",
+    "animation-frame": "~0.2.4"
   }
 }

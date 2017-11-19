@@ -8,6 +8,7 @@ export default Component.extend({
   actions: {
     expand() {
       if (!this.get('episodeDetails')) {
+        console.log('episodeId: ' + this.get('pokemon.simplecastEpisodeId'));
         this.get('store').findRecord('episode', this.get('pokemon.simplecastEpisodeId')).then((episode) => {
             this.set('episodeDetails', episode);
             this.toggleProperty('expanded');

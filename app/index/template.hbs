@@ -1,10 +1,8 @@
-<div class={{if media.isMobile 'w-100' 'col-xl-10 offset-xl-1' }}>
-    {{#each model as |episode|}}
-        {{episode-card episode=episode class="episode-card"}}
+<div class= {{if media.isMobile 'w-100' 'col-xl-10 offset-xl-1' }}>
+  {{#infinite-scroller use-document=true trigger-at="65%" on-load-more=(action 'loadMore') as |scroller|}}
+    {{#each modelToRender as |episode|}}
+      {{episode-card episode=episode class="episode-card"}}
     {{/each}}
-    {{#if moreEpisodes}}
-        <div class="text-center mb-3">
-            <button type="btn" class="btn btn-primary" {{action 'fetchMorePages'}}>More Episodes</button>
-        </div>
-    {{/if}}
+    {{if scroller.isLoading 'Please wait...'}}
+  {{/infinite-scroller}}
 </div>

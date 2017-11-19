@@ -1,6 +1,10 @@
-import { htmlSafe } from '@ember/string';
+import {
+  htmlSafe
+} from '@ember/string';
 import Component from '@ember/component';
-import computed from 'ember-computed-decorators';
+import {
+  computed
+} from 'ember-decorators/object';
 
 const CONVERTER = new showdown.Converter();
 

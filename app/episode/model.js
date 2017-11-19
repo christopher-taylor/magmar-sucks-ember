@@ -2,11 +2,11 @@ import DS from 'ember-data';
 import { attr } from "ember-decorators/data";
 
 export default DS.Model.extend({
-    @attr('string') title,
-    @attr('string') date,
-    @attr('string') description,
-    @attr('string') shownotes,
-    @attr('string') imageSmall,
-    @attr('string') imageMedium,
-    @attr('string') imageLarge
+    @attr('string') title: null,
+    @attr('string') date: null,
+    @attr('string') description: null,
+    @attr('string') shownotes: null,
+    @attr('string') imageSmall: null,
+    @attr('string') imageMedium: null,
+    @attr('string') imageLarge: null
 });

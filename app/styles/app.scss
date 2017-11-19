@@ -14,6 +14,9 @@ $tertiaryLight: #ffffff;
 nav, nav > *{
   background-color: $secondaryField !important;
 }
+.w-45{
+  width: 45% !important;
+}
 
 .nav-link.mobile{
   color: $tertiaryLight !important;
@@ -177,7 +180,6 @@ body {
   background: #ecf0f1;
 }
 .center-on-page {
-  height: 100vh;
   position: relative;
   top: 0;
   left: calc(50% - 100px);
