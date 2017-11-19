@@ -8,6 +8,7 @@ const CONVERTER = new showdown.Converter();
 
 export default DS.JSONAPISerializer.extend({
   normalizeArrayResponse(store, primaryModelClass, payload, id, requestType) {
+    console.log(payload)
     let output = {};
     let data = [];
     payload.forEach((episode) => {
@@ -33,12 +34,8 @@ export default DS.JSONAPISerializer.extend({
 
     record.type = 'episode';
     attributes.title = episode.title;
-    attributes.date = date;
     attributes.description = htmlSafe(CONVERTER.makeHtml(episode.long_description));
-    attributes.shownotes = episode.long_description;
-    attributes.imageSmall = episode.images.thumb;
-    attributes.imageMedium = episode.images.small;
-    attributes.imageLarge = episode.images.large;
+    attributes.shortDescription = episode.description;
 
     let urlParts = episode.sharing_url.split('/');
     record.id = urlParts[urlParts.length - 1];
