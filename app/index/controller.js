@@ -19,7 +19,6 @@ export default Controller.extend({
     if(!this.get('moreEpisodes')){
       return;
     }
-    this.set('page', this.get('page') + 1);
     let size = this.get('size');
     let model = this.get('model');
     let startIndex = this.get('page') * size;
@@ -36,5 +35,6 @@ export default Controller.extend({
     newEpisodes.forEach((episode) => {
       modelToRender.addObject(episode);
     });
+    this.set('page', this.get('page') + 1);
   }
 });
