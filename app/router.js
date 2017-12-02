@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('404');
   this.route('catch-all', { path: '*:'});
   this.route('loading');
+  this.route('email');
 });
 
 export default Router;

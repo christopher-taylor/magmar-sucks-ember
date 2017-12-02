@@ -1,26 +1,3 @@
-{{#ember-remodal forService=true title='Contact Us' }}
-  <form action="https://formspree.io/contact@magmar.sucks" method="POST" class="text-left">
-    <div class="form-group">
-      <label for="email">Email address</label>
-      {{input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
-      placeholder="Enter email" value=address required=true}}
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email.</small>
-    </div>
-    <div class="form-group">
-      <label for="subject">Subject</label>
-      {{input type="text" class="form-control" name="_subject" id="subject" aria-describedby="emailHelp"
-      placeholder="What are you emailing us about" value=subject required=true}}
-    </div>
-    <input type="hidden" name="_next" value="http://www.magmar.sucks/" />
-    <div class="form-group">
-      <label for="exampleTextarea">Message</label>
-      {{input type='textarea' class="form-control" name="body" placeholder="Write your (optionally) meaningful message here" id="exampleTextarea" rows="3" value=body
-      required=true}}
-    </div>
-    <button type="submit" disabled= {{sendDisabled}} class="btn btn-primary pull-right">Submit</button>
-  </form>
-{{/ember-remodal}}
-
 {{#if media.isMobile}}
   <nav class="navbar navbar-toggleable-md sticky-top navbar-inverse" style="width:100%!important;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -42,7 +19,7 @@
           <a {{action 'toggleAndTransition' 'pre-update-one'}} class="nav-link mobile">E000-E055</a>
         </li>
         <li class="nav-item">
-          <a href="#" class='nav-link mobile' {{action 'openModal'}}>Contact Us</a>
+          <a {{action 'toggleAndTransition' 'email'}} class='nav-link mobile'>Contact Us</a>
         </li>
       </ul>
     </div>
@@ -82,7 +59,7 @@
             {{#link-to 'pre-update-one' class="nav-link" }}E000-E055{{/link-to}}
           </li>
           <li class="nav-item">
-            <a href="#" class='nav-link' {{action 'openModal'}}>Contact Us</a>
+            {{#link-to 'email' class="nav-link" }}Contact Us{{/link-to}}
           </li>
         </ul>
       {{/unless}}

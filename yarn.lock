@@ -2810,13 +2810,6 @@ ember-qunit@^2.2.0:
   dependencies:
     ember-test-helpers "^0.6.3"
 
-ember-remodal@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ember-remodal/-/ember-remodal-2.0.0.tgz#386d936087241e86287b47f3d40ba30ccf9305e3"
-  dependencies:
-    ember-cli-babel "^5.1.6"
-    ember-cli-htmlbars "^1.0.3"
-
 ember-resolver@^4.0.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/ember-resolver/-/ember-resolver-4.5.0.tgz#9248bf534dfc197fafe3118fff538d436078bf99"

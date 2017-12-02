@@ -1,5 +1,5 @@
 <div class= {{if media.isMobile 'w-100' 'col-xl-10 offset-xl-1' }}>
-  {{#infinite-scroller use-document=true trigger-at="65%" on-load-more=(action 'loadMore') as |scroller|}}
+  {{#infinite-scroller use-document=true trigger-at="60%" on-load-more=(action 'loadMore') as |scroller|}}
     {{#each modelToRender as |episode|}}
       {{episode-card episode=episode class="episode-card"}}
     {{/each}}

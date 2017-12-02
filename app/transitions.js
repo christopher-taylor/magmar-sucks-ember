@@ -21,4 +21,9 @@ export default function() {
     this.use('toRight'),
     this.reverse('toLeft')
   );
+  this.transition(
+    this.toRoute('email'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  )
 }
