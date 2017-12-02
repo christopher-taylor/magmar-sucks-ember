@@ -26,5 +26,5 @@ export default DS.JSONAPISerializer.extend({
     output.data = data;
     output.meta = {};
     return output;
-  }
+  },
 });
