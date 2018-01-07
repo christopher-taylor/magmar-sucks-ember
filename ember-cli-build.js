@@ -11,12 +11,11 @@ module.exports = function(defaults) {
     }
   });
 
-  var bsPathPrefix = 'vendor/bs-4.0.0-alpha.6';
-  app.import(`${bsPathPrefix}/deps/tether.min.js`);
+  var bsPathPrefix = 'vendor/bs-4.0.0-beta.3';
   app.import(`${bsPathPrefix}/css/bootstrap-grid.min.css`);
   app.import(`${bsPathPrefix}/css/bootstrap-reboot.min.css`);
   app.import(`${bsPathPrefix}/css/bootstrap.min.css`);
-  app.import(`${bsPathPrefix}/js/bootstrap.min.js`);
+  app.import(`${bsPathPrefix}/js/bootstrap.bundle.min.js`);
   app.import(`vendor/showdown.min.js`); //Markdown to HTML
 
   return app.toTree();
