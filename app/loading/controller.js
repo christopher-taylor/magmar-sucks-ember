@@ -1,7 +1,7 @@
 import { later } from '@ember/runloop';
 import Controller, { inject as controller } from '@ember/controller';
 
-const DANK_MEMES = ['Spewing Pedantry', 'Being Scientifically Accurate', "Lighting Crab's Cigarettes", 'Reading Bulbapedia', 'Waking Up Inside', 'Neglecting Editing', 'Skipping Pre-Production', 'Screaming into the Void', 'Weighing Porygons', 'Fragging Hikers', 'Warring Over Sticks', 'Fucking Fish', 'Misattributing Units', 'Ignoring Tier Names', 'Figuratively Hating Literally', 'Elongating the Laws Nipples', 'Editing Spreadsheets', 'Talking Over Each Other', 'Hating On Co-Hosts', 'Forgetting Episode Releases', 'Making the Hard Sell', 'Not Speaking Weeab', 'Folding Japanese Steel', 'Dying In Fake Japan', 'Eating Well Done Berries', 'SAVAGE', 'Taking Skullbreakers', 'Browsing Hot Topic', 'Experiencing Ennui'];
+const DANK_MEMES = ['Spewing Pedantry', 'Reading Sudowoodo Monthly', 'Spreadsheet Panic', 'Exterminating Grimers', 'Being Scientifically Accurate', "Lighting Crab's Cigarettes", 'Reading Bulbapedia', 'Waking Up Inside', 'Neglecting Editing', 'Skipping Pre-Production', 'Screaming into the Void', 'Weighing Porygons', 'Redrawing Maps', 'Warring Over Sticks', 'Getting Tinitus', 'Misattributing Units', 'Being the Tyrannical Majority', 'Elongating the Laws Nipples', 'Editing Spreadsheets', 'Talking Over Each Other', 'Hating On Co-Hosts', 'Forgetting Episode Releases', 'Making the Hard Sell', 'Not Speaking Weeab', 'Dying In Fake Japan', 'Eating Well Done Berries', 'SAVAGE', 'Taking Skullbreakers', 'Browsing Hot Topic', 'Experiencing Ennui'];
 
 export default Controller.extend({
     application: controller(),

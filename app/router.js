@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('current');
   this.route('pre-update-one');
   this.route('pre-update-two');
+  this.route('pre-usm');
   this.route('404');
   this.route('catch-all', { path: '*:'});
   this.route('loading');

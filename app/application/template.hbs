@@ -13,6 +13,9 @@
           <a {{action 'toggleAndTransition' 'current'}} class='nav-link mobile'>Current Rankings</a>
         </li>
         <li class="nav-item">
+          <a {{action 'toggleAndTransition' 'pre-usm'}} class="nav-link mobile">E131-E267</a>
+        </li>
+        <li class="nav-item">
           <a {{action 'toggleAndTransition' 'pre-update-two'}} class="nav-link mobile">E056-E130</a>
         </li>
         <li class="nav-item">
@@ -52,7 +55,9 @@
             {{#link-to 'current' class='nav-link' }}Current Rankings{{/link-to}}
           </li>
           <li class="nav-item">
-
+            {{#link-to 'pre-usm' class="nav-link"}}E131-E267{{/link-to}}
+          </li>
+          <li class="nav-item">
             {{#link-to 'pre-update-two' class="nav-link" }}E056-E130{{/link-to}}
           </li>
           <li class="nav-item">

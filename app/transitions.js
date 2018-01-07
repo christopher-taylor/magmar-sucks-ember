@@ -11,6 +11,12 @@ export default function() {
   );
   this.transition(
     this.fromRoute('current'),
+    this.toRoute(['pre-update-one', 'pre-update-two', 'pre-usm']),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('pre-usm'),
     this.toRoute(['pre-update-one', 'pre-update-two']),
     this.use('toLeft'),
     this.reverse('toRight')

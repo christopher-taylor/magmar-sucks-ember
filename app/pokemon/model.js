@@ -5,5 +5,6 @@ export default DS.Model.extend({
   @attr('number') simplecastEpisodeId: null,
   @attr('string') name: null,
   @attr('string') description: null,
-  @attr('string') tier: null
+  @attr('string') tier: null,
+  @attr('string') episodeDetails: null
 });
