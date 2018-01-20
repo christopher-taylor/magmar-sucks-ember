@@ -16,7 +16,6 @@ export default DS.JSONAPISerializer.extend({
         attributes = {};
         record.id = pokemon[1];
         attributes.name = pokemon[0];
-        attributes.simplecastEpisodeId = pokemon[3];
         attributes.description = pokemon[2];
         attributes.tier = parseInt(pokemon[4]);
         record.attributes = attributes;
