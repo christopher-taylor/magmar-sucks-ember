@@ -8,6 +8,8 @@ const CONVERTER = new showdown.Converter();
 
 export default DS.JSONAPISerializer.extend({
   normalizeArrayResponse(store, primaryModelClass, payload, id, requestType) {
+    console.log("normalizeArray")
+    console.log(payload)
     let output = {};
     let data = [];
     payload.forEach((episode) => {
@@ -21,6 +23,8 @@ export default DS.JSONAPISerializer.extend({
   },
 
   normalizeSingleResponse(store, primaryModelClass, payload, id, requestType) {
+    console.log("singleResponse")
+    console.log(payload)
     let output = {};
     output.data = this.createRecord(payload);
     output.meta = {};

@@ -1,8 +1,3 @@
-<div class= {{if media.isMobile 'w-100' 'col-xl-10 offset-xl-1' }}>
-  {{#infinite-scroller use-document=true trigger-at="60%" on-load-more=(action 'loadMore') as |scroller|}}
-    {{#each modelToRender as |episode|}}
-      {{episode-card episode=episode class="episode-card"}}
-    {{/each}}
-    {{if scroller.isLoading 'Please wait...'}}
-  {{/infinite-scroller}}
-</div>
+{{#each model as |tier|}}
+    {{table-component tier=tier}}
+{{/each}}
