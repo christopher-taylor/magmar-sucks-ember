@@ -7,6 +7,7 @@ export default Controller.extend({
     application: controller(),
     currentMeme: null,
     init(){
+      this._super(...arguments);
         this.memeCallback();
     },
 

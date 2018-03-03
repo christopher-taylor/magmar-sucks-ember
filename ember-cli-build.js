@@ -2,9 +2,17 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
-    'ember-font-awesome': {
-      fontFormats: ['svg', 'woff', 'woff2']
+  let app = new EmberApp(defaults, {
+    fontawesome: {
+      icons: {
+        'fontawesome-free-brands': [
+          'faGoogle',
+          'faApple'
+        ],
+        'fontawesome-free-solid': [
+          'faRss'
+        ]
+      }
     },
     babel: {
       optional: ['es7.decorators']
