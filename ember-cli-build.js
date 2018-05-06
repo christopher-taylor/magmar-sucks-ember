@@ -1,30 +1,24 @@
-'Use Strict';
+'use strict';
+
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    fontawesome: {
-      icons: {
-        'fontawesome-free-brands': [
-          'faGoogle',
-          'faApple'
-        ],
-        'fontawesome-free-solid': [
-          'faRss'
-        ]
-      }
-    },
-    babel: {
-      optional: ['es7.decorators']
-    }
+    // Add options here
   });
 
-  var bsPathPrefix = 'vendor/bs-4.0.0-beta.3';
-  app.import(`${bsPathPrefix}/css/bootstrap-grid.min.css`);
-  app.import(`${bsPathPrefix}/css/bootstrap-reboot.min.css`);
-  app.import(`${bsPathPrefix}/css/bootstrap.min.css`);
-  app.import(`${bsPathPrefix}/js/bootstrap.bundle.min.js`);
-  app.import(`vendor/showdown.min.js`); //Markdown to HTML
+  // Use `app.import` to add additional libraries to the generated
+  // output files.
+  //
+  // If you need to use different assets in different
+  // environments, specify an object as the first parameter. That
+  // object's keys should be the environment name and the values
+  // should be the asset to use in that environment.
+  //
+  // If the library that you are including contains AMD or ES6
+  // modules that you would like to import into your application
+  // please specify an object with the list of modules as keys
+  // along with the exports of each module as its value.
 
   return app.toTree();
 };

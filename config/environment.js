@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'magmar-sucks-ember',
+    modulePrefix: 'magmar-sucks',
     environment,
     rootURL: '/',
     locationType: 'auto',
