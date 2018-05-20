@@ -52,6 +52,7 @@
     "ember-font-awesome": "^4.0.0-alpha.14",
     "ember-modules-codemod": "^0.2.10",
     "ember-responsive": "^2.0.5",
-    "ember-simple-infinite-scroller": "^1.0.10"
+    "ember-simple-infinite-scroller": "^1.0.10",
+    "npm": "^6.0.1"
   }
 }
