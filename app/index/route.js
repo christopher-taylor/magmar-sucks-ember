@@ -14,7 +14,6 @@ export default Route.extend({
             pokemon: pokemon.filterBy('tier', index)
           });
         });
-        console.log(model);
         return model;
       });
     }

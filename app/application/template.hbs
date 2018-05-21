@@ -34,8 +34,8 @@
     title="LOOK AT THIS FUCKING PLEBE" alt="A banner with magmar's head that says MAgmar Sucks: A Fair and Objective Ranking of Pokemon.">
   <div class= {{unless media.isMobile 'row'}}>
 
-    <div class="d-inline-flex flex-column justify-content-between mt-2 {{if media.isMobile "text-justify" 'col-11'}}">
-      <div class= {{if media.isMobile "pl-2 pr-2"}}>
+    <div class="d-inline-flex flex-column justify-content-between {{if media.isMobile "text-justify" 'col-11'}}">
+      <div class={{if media.isMobile "pl-2 pr-2"}}>
         <p>
           Pokemon are loved by all, unless you're Magmar - if you're Magmar, you suck. From
           the depths of the Pokedex, we bring you a discussion about the world's
@@ -61,7 +61,7 @@
             {{#link-to 'pre-update-one' class="nav-link" }}E000-E055{{/link-to}}
           </li>
           <li class="nav-item">
-            <a href="https://www.patreon.com/pitchdrop" class="nav-link">Patreon</a>
+            <a href="https://www.patreon.com/pitchdrop/overview" class="nav-link">Patreon</a>
           </li>
           <li class="nav-item">
             {{#link-to 'email' class="nav-link" }}Contact Us{{/link-to}}
@@ -69,17 +69,18 @@
         </ul>
       {{/unless}}
     </div>
-    <div class="d-inline-flex {{unless media.isMobile 'col-1 text-right justify-content-around flex-column mt-2' 'w-100 text-center flex-row justify-content-between pl-2 pr-2'}}">
+    <div class="d-inline-flex {{unless media.isMobile 'col-1 justify-content-around flex-column' 'w-100 text-center flex-row justify-content-between pl-2 pr-2'}}">
       <a href='https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&amp;isi=691797987&amp;ius=googleplaymusic&amp;link=https://play.google.com/music/m/I6x5pmmhw5dzo52nb6vplkuerza?t%3DMagmar_Sucks%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16'
         rel='nofollow'>
-        {{fa-icon 'google' prefix='fab' size='lg' class="social-link"}}
+        {{fa-icon 'google' prefix='fab' size=2 class="social-link"}}
       </a>
       <a href="https://geo.itunes.apple.com/us/podcast/magmar-sucks/id1125767902?mt=2">
-        {{fa-icon 'apple' prefix="fab" size='lg' class="social-link"}}
+        {{fa-icon 'apple' prefix="fab" size=2 class="social-link"}}
       </a>
-      <a href="
-    https://magmarsucks.fireside.fm/rss">{{fa-icon 'rss' size="lg" class="social-link"}}</a>
+      <a href="https://magmarsucks.fireside.fm/rss">
+        {{fa-icon 'rss' size=2 class="social-link"}}
+      </a>
     </div>
   </div>
 </div>
-<hr/> {{outlet}}
+<hr/>{{outlet}}
