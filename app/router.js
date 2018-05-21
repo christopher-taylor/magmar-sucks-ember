@@ -7,6 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('current');
   this.route('pre-update-one');
   this.route('pre-update-two');
   this.route('pre-usm');

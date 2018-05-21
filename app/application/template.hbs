@@ -7,7 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a {{action 'toggleAndTransition' 'index'}} class='nav-link mobile'>Current Rankings</a>
+          <a {{action 'toggleAndTransition' 'index'}} class='nav-link mobile'>Home</a>
+        </li>
+        <li class="nav-item">
+          <a {{action 'toggleAndTransition' 'current'}} class='nav-link mobile'>Current Rankings</a>
         </li>
         <li class="nav-item">
           <a {{action 'toggleAndTransition' 'pre-usm'}} class="nav-link mobile">E131-E267</a>
@@ -49,7 +52,10 @@
       {{#unless media.isMobile}}
         <ul class="nav nav-pills justify-content-center">
           <li class="nav-item">
-            {{#link-to 'index' class='nav-link' }}Current Rankings{{/link-to}}
+            {{#link-to 'index' class='nav-link' }}Index{{/link-to}}
+          </li>
+          <li class="nav-item">
+            {{#link-to 'current' class='nav-link' }}Current Rankings{{/link-to}}
           </li>
           <li class="nav-item">
             {{#link-to 'pre-usm' class="nav-link"}}E131-E267{{/link-to}}
