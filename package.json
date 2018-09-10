@@ -20,6 +20,7 @@
     "@ember-decorators/babel-transforms": "^2.0.0",
     "@ember/optional-features": "^0.5.2",
     "@fortawesome/ember-fontawesome": "^0.0.11",
+    "@zestia/ember-simple-infinite-scroller": "^3.0.2",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^3.0.0",
     "ember-cli": "~3.1.4",

@@ -1,0 +1,18 @@
+<div class="w-100 d-flex flex-row flex-align-items-end justify-content-between">
+  <h3 class="tk-iskra">{{episode.title}}</h3>
+  <h6 class="episode-date">{{episode.datePublished}}</h6>
+</div>
+<hr />
+<div class="w-100">
+  <audio class="w-100" controls>
+    <source src={{concat 'https://aphid.fireside.fm/d/1437767933/5c797724-e250-465b-bda3-8bb3e7092477/' episode.id '.mp3'}}
+      type="audio/mpeg" preload="none">
+    Your browser does not support the audio element.
+  </audio><br />
+  <div class="episode-description {{if media.isMobile 'text-justify'}}">
+    <p>
+      {{if episode.summary episode.summary "We're lazy fucks, so there isn't a description for this episode!"}}
+    </p>
+    {{{if episode.descriptionHtml episode.descriptionHtml}}}
+  </div>
+</div>
