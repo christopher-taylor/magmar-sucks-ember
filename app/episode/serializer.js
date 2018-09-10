@@ -6,7 +6,6 @@ export default DS.JSONAPISerializer.extend({
     let output = {};
     let data = [];
     let attributes = {};
-    console.log(payload)
     payload.forEach((episode) => {
       let record = {
         type: "episode"

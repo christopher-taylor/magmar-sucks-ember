@@ -2,19 +2,9 @@ import DS from 'ember-data';
 
 export default DS.JSONAPIAdapter.extend({
     findAll(store, type, sinceToken, snapshotRecordArray) {
-        return $.ajax({
-            url: "/data/feed.json",
-            type: 'GET',
-            success: function (data) {
-                console.log(data);
-                return data;
-                //process the JSON data etc
-            },
-            
-        });
-    },
-    
-    urlForQuery() {
-        return `/data/feed.json`;
+        return $.getJSON("https://magmarsucks.fireside.fm/json", function (result) {
+          //response data are now in the result variable
+          return result['items'];
+        });;
     }
 });

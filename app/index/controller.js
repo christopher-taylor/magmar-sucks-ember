@@ -4,7 +4,7 @@ import EmberArray from '@ember/array';
 
 export default Controller.extend({
       // Infinite scroll fields.
-      page: 0,
+      page: -1, // This is set to -1 because the controller calls load more which starts by incrementing this counter. This is very fixable but I'm not feeling it right now!
       size: 5,
       moreEpisodes: true,
       modelToRender: [],
